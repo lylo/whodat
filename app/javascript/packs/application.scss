@@ -1,0 +1,89 @@
+body {
+  background-color: midnightblue;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media only screen and (min-width: 800px) {
+  .logo {
+    position: fixed;
+    left: 0;
+    top: 0
+  }
+
+  .wrapper {
+    margin-top: 4em;
+    text-align: center;
+  }
+
+  .container {
+    margin-top: 10rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .wrapper {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .container {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.person {
+  text-transform: capitalize;
+  font-family: Impact, sans-serif;
+  font-size: 3em;
+  color: black;
+
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+// .container {
+//   // height: 100vh; //vh - viewport height
+//   // display: flex;
+//   // flex-direction: column;
+//   // align-items: center;
+//   // justify-content: center;
+// }
+
+.chunky-button {
+  padding: 2rem;
+  border-radius: 5%;
+  background-color: #F0DB1B;
+  border: 3px solid #C30303;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 2em;
+  color: black;
+}
+
+.chunky-button:hover {
+  color: #C30303;
+}
+
+.ms-1 {
+  margin-left: 0.5em;
+}
+.ms-2 {
+  margin-left: 1em;
+}
+
+.mb-3 {
+  margin-bottom: 4rem;
+}
