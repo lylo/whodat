@@ -1,6 +1,7 @@
 class WhoController < ApplicationController
-  def index
+  include Authorization
 
+  def index
   end
 
   def play
