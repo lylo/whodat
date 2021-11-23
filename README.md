@@ -1,5 +1,7 @@
 # Who 'Dat?
 
+![logo](whodat.png)
+
 Who 'Dat? is simple game to help you get to know the people on your team.
 
 It parses the data in a "Who's Who" Trello board which must be constructed as follows:
