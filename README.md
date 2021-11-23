@@ -45,6 +45,8 @@ trello:
   token: [YOUR API TOKEN]
 ```
 
+You also need to set the environment variable `TRELLO_BOARD_ID` (e.g. `Yae2dtTq`).
+
 ### Configure Google Sign In
 
 You need to configure the app with Google creds.

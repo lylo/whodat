@@ -1,6 +1,4 @@
 namespace :trello do
-  WHOS_WHO = "Xau2Ttaq"
-
   desc "Looks for Trello cards that have been archived (closed) and discards the person in the database"
   task clean: :environment do
     Rails.logger = Logger.new(STDOUT)
@@ -22,7 +20,10 @@ namespace :trello do
     Rails.logger = Logger.new(STDOUT)
     Rails.logger.info "Loading cards from Trello"
 
-    lists = Trello::Board.find(WHOS_WHO).lists
+    board = ENV['TRELLO_BOARD_ID']
+    raise "Missing environment variable TRELLO_BOARD_ID" if board.nil?
+
+    lists = Trello::Board.find(board).lists
     lists.each do |list|
       Rails.logger.info "Checking #{list.name}"
 
@@ -32,6 +33,11 @@ namespace :trello do
         person = Person.find_or_create_by!(trello_card_id: card.id)
 
         Rails.logger.info "checking #{card.name}"
+
+        if person.updated_at > card.last_activity_date
+          Rails.logger.info "No activity. Skipping"
+          next
+        end
 
         name, title = card.name.split /[\[(]/
         person.name = name.strip if name
