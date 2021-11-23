@@ -10,7 +10,8 @@ body {
   .logo {
     position: fixed;
     left: 0;
-    top: 0
+    top: 0;
+    width: 200px;
   }
 
   .wrapper {
@@ -32,6 +33,8 @@ body {
 
   .logo {
     text-align: center;
+    width: 125px;
+    margin: 0 auto;
   }
 
   .container {
@@ -41,7 +44,8 @@ body {
 
   .responsive {
     width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 350px;
   }
 }
 
