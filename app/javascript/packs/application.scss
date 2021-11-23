@@ -49,7 +49,6 @@ body {
   }
 }
 
-
 .person {
   text-transform: uppercase;
   font-family: 'Passion One', sans-serif;
@@ -59,19 +58,38 @@ body {
   -webkit-text-stroke: 1px black;
 }
 
-.chunky-button {
-  padding: 2rem;
-  border-radius: 5%;
-  background-color: #F0DB1B;
-  border: 3px solid #C30303;
+.btn-image {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
   text-decoration: none;
-  font-weight: bolder;
-  font-size: 2em;
-  color: black;
+  background-color: transparent;
+}
+
+.btn-google-sign-in {
+  width: 191px;
+  height: 46px;
+  background-image: url("images/btn_google_signin_dark_normal_web.png");
+}
+
+.btn-google-sign-in:active {
+  background-image: url("images/btn_google_signin_dark_pressed_web.png");
+}
+
+.chunky-button {
+  font-family: 'Passion One', sans-serif;
+  font-size: 2.5em;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  padding: 2rem;
+  border-radius: 10px;
+  background: rgb(255,236,0);
+  background: linear-gradient(180deg, rgba(255,236,0,1) 0%, rgba(255,173,0,1) 51%, rgba(255,115,0,1) 100%);
+  text-decoration: none;
 }
 
 .chunky-button:hover {
-  color: #C30303;
+  -webkit-text-stroke: 1px #C30303;
 }
 
 .ms-1 {
