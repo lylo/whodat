@@ -3,7 +3,7 @@
     <div id="who" data-who-target="slide" data-index="0" data-who-index-value="0">Who 'dat?</div>
     <div id="masked_name" data-who-target="slide" data-index="1" data-who-index-value="1"><%= @masked_name %></div>
     <div id="full_name" data-who-target="slide" data-index="3" data-who-index-value="3"><%= @person.name %></div>
-    <div class="avatar"><%= image_tag @person.avatar.variant(resize_to_fit: [800, 800]), class: "responsive" %></div>
+    <div class="avatar"><%= image_tag @person.avatar.variant(resize_to_fit: [800, 500]), class: "responsive" %></div>
     <div id="title" data-who-target="slide" data-index="2" data-who-index-value="2"><%= @person.title %></div>
   </div>
 </div>
