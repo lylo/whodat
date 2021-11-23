@@ -7,6 +7,7 @@ gem 'rails', github: 'rails/rails', branch: 'main'
 
 gem "aws-sdk-s3", require: false
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'discard', '~> 1.2'
 gem 'down'
 gem 'google_sign_in'
 gem 'image_processing', '~> 1.2'
