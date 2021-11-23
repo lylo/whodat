@@ -1,4 +1,5 @@
 namespace :trello do
+
   desc "Looks for Trello cards that have been archived (closed) and discards the person in the database"
   task clean: :environment do
     Rails.logger = Logger.new(STDOUT)
@@ -15,7 +16,7 @@ namespace :trello do
     end
   end
 
-  desc "Loads (and updates) peple from the Trello board"
+  desc "Loads (and updates) people from the Trello board"
   task load_people: :environment do
     Rails.logger = Logger.new(STDOUT)
     Rails.logger.info "Loading cards from Trello"
