@@ -72,3 +72,36 @@ bundle exec rails server
 ```
 
 You can view the app at http://localhost:3000. You'll need to log in via Google to play.
+
+## Deploying to Heroku
+
+If you're deploying to Heroku you'll need to configure `Active::Storage` to store the attachments in cloud storage. By default this is in DigitalOcean spaces (it's way easier to wrangle than S3).
+
+In `storage.yml` you can see the Digital Ocean storage options:
+
+```yaml
+digitalocean:
+  service: S3
+  access_key_id: <%= Rails.application.credentials.dig(:digitalocean, :access_key_id) %>
+  secret_access_key: <%= Rails.application.credentials.dig(:digitalocean, :secret_access_key) %>
+  bucket: <%= Rails.application.credentials.dig(:digitalocean, :bucket) %>
+  region: <%= Rails.application.credentials.dig(:digitalocean, :region) %>
+  endpoint: <%= Rails.application.credentials.dig(:digitalocean, :endpoint) %>
+```
+
+This is referenced in `production.rb`:
+
+```ruby
+config.active_storage.service = :digitalocean
+```
+
+Details of the Digital Ocean Spaces bucket and API keys are defined in your Rails credentials:
+
+```yaml
+digitalocean:
+  access_key_id: [YOUR ACCESS KEY]
+  secret_access_key: [YOUR SECRET KEY]
+  bucket: [YOUR BUCKET NAME]
+  region: [YOUR REGION e.g. ams3]
+  endpoint: [YOUR ENDPOINT e.g. https://ams3.digitaloceanspaces.com]
+```
