@@ -40,9 +40,9 @@ namespace :trello do
           next
         end
 
-        name, title = card.name.split /[\[(]/
-        person.name = name.strip if name
-        person.title = title.gsub(/[\)\]]/, "").strip if title
+        name, title = CardName.name_and_title(card.name)
+        person.name = name
+        person.title = title
         person.team = list.name
         person.trello_created_at = card.created_at
         person.save!
