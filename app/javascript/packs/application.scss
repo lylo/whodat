@@ -4,6 +4,25 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.mb-3 {
+  margin-bottom: 4rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 4rem;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (min-width: 800px) {
   .logo {
     position: fixed;
@@ -20,6 +39,10 @@ body {
   .container {
     margin-top: 10rem;
     text-align: center;
+  }
+
+  .me-lg-2 {
+    margin-right: 1rem;
   }
 }
 
@@ -45,6 +68,10 @@ body {
     width: auto;
     max-height: 350px;
   }
+
+  .box {
+    flex-direction: column;
+  }
 }
 
 .person {
@@ -56,12 +83,21 @@ body {
   -webkit-text-stroke: 1px black;
 }
 
-.btn-image {
+.btn {
   cursor: pointer;
-  display: inline-block;
   border: none;
   text-decoration: none;
+  display: inline-block;
   background-color: transparent;
+}
+
+.btn-link {
+  color: white;
+  font-size: 1rem;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
 }
 
 .btn-google-sign-in {
@@ -79,6 +115,7 @@ body {
   font-size: 2.5em;
   color: white;
   -webkit-text-stroke: 1px black;
+  width: 10rem;
   padding: 2rem;
   border-radius: 10px;
   background: rgb(255,236,0);
@@ -88,15 +125,4 @@ body {
 
 .chunky-button:hover {
   -webkit-text-stroke: 1px #C30303;
-}
-
-.ms-1 {
-  margin-left: 0.5em;
-}
-.ms-2 {
-  margin-left: 1em;
-}
-
-.mb-3 {
-  margin-bottom: 4rem;
 }
