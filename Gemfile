@@ -19,6 +19,12 @@ gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
+# These gems are required by the mail gem, but no longer included with Ruby since 3.1
+# These can be removed from our Gemfile once mail is updated: https://github.com/mikel/mail/pull/1472
+gem "net-imap"
+gem "net-pop"
+gem "net-smtp"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
