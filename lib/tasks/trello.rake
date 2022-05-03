@@ -31,11 +31,11 @@ namespace :trello do
       cards = Trello::List.find(list.id).cards
       cards.each do |c|
         card = Trello::Card.find(c.id)
-        person = Person.find_or_create_by!(trello_card_id: card.id)
+        person = Person.find_or_initialize_by(trello_card_id: card.id)
 
         Rails.logger.info "checking #{card.name}"
 
-        if person.updated_at > card.last_activity_date
+        if person.persisted? && person.updated_at > card.last_activity_date
           Rails.logger.info "No activity. Skipping"
           next
         end
