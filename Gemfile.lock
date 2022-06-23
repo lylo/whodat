@@ -170,7 +170,7 @@ GEM
     jmespath (1.6.1)
     json (2.6.1)
     jwt (2.3.0)
-    listen (3.7.0)
+    listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.12.0)
@@ -238,7 +238,7 @@ GEM
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
     rake (13.0.6)
-    rb-fsevent (0.11.0)
+    rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.1.1)
@@ -330,7 +330,7 @@ DEPENDENCIES
   google_sign_in
   image_processing (~> 1.12)
   jbuilder (~> 2.7)
-  listen (~> 3.3)
+  listen (~> 3.7)
   net-imap
   net-pop
   net-smtp
