@@ -207,7 +207,7 @@ GEM
       version_gem (~> 1.1)
     pg (1.4.5)
     public_suffix (4.0.7)
-    puma (5.6.4)
+    puma (6.0.0)
       nio4r (~> 2.0)
     racc (1.6.1)
     rack (2.2.4)
@@ -324,7 +324,7 @@ DEPENDENCIES
   net-pop
   net-smtp
   pg
-  puma (~> 5.6)
+  puma (~> 6.0)
   rack-mini-profiler (~> 3.0)
   rails!
   ruby-trello
