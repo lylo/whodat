@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.1.3'
 
-gem 'rails', github: 'rails/rails', branch: 'main'
+gem "rails", "~> 7.0.4"
 
 gem "aws-sdk-s3", require: false
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -11,9 +11,9 @@ gem 'discard', '~> 1.2'
 gem 'down'
 gem 'google_sign_in'
 gem 'image_processing', '~> 1.12'
-gem 'jbuilder', '~> 2.11'
+gem 'jbuilder', '~> 2.7'
 gem 'pg'
-gem 'puma', '~> 6.0'
+gem 'puma', '~> 5.6'
 gem 'ruby-trello'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
@@ -35,7 +35,7 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 3.0'
+  gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.7'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
