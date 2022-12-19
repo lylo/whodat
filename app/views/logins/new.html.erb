@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="person mb-3">Who 'dat?</h1>
 
-  <%= google_sign_in_button '', proceed_to: create_login_url, class: "btn btn-google-sign-in" %>
+  <%= google_sign_in_button '', proceed_to: create_login_url, data: {turbo: "false"}, class: "btn btn-google-sign-in" %>
 
 </div>
