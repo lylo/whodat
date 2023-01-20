@@ -134,7 +134,7 @@ GEM
     jmespath (1.6.2)
     json (2.6.3)
     jwt (2.5.0)
-    listen (3.7.1)
+    listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.19.1)
@@ -304,7 +304,7 @@ DEPENDENCIES
   image_processing (~> 1.12)
   importmap-rails
   jbuilder (~> 2.7)
-  listen (~> 3.7)
+  listen (~> 3.8)
   pg
   puma
   rack-mini-profiler
