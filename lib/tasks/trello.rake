@@ -8,10 +8,19 @@ namespace :trello do
     Person.kept.find_each do |person|
       Rails.logger.info "Checking #{person.name}"
 
-      card = Trello::Card.find(person.trello_card_id)
-      if card.closed
-        Rails.logger.info "Deleting #{person.name}"
-        person.discard!
+      begin
+        card = Trello::Card.find(person.trello_card_id)
+        if card.closed
+          Rails.logger.info "Card closed. Deleting #{person.name}"
+          person.discard!
+        end
+      rescue Trello::Error => e
+        if e.status_code == 404
+          Rails.logger.info "Card not found. Deleting #{person.name}"
+          person.discard!
+        else
+          Rails.logger.warn "Unknown error. Status code: #{e.status_code}"
+        end
       end
     end
   end
