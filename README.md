@@ -1,3 +1,7 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fac_whodat&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fac_whodat)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fac_whodat&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fac_whodat)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fac_whodat&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=fac_whodat)
+
 # Who 'Dat?
 
 ![logo](whodat.png)
